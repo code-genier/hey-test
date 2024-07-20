@@ -1,1 +1,1 @@
-print("nfddb")
+print("n fddb")
