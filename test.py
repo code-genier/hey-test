@@ -1,1 +1,1 @@
-print("n f d db")
+print("ng d db")
