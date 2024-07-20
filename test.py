@@ -1,1 +1,1 @@
-print("n g d dfv b")
+print("ng d dfv b")
