@@ -1,2 +1,2 @@
 print("ggdrffgc ffcvfgfvffbb dfvb")
-print("ok")
+print("ok test")
