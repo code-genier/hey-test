@@ -1,6 +1,6 @@
 # pylint: disable=broad-except,R0201,W0613,E1111,E1128,R0902
 """
-Action for app rolling restart action
+Action for app rolling restart actiond
 """
 import datetime
 import json
