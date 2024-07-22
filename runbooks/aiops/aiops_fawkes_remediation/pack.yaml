@@ -1,5 +1,6 @@
 ---
-ref: aiops_fawkes_remediation
+# ref: aiops_fawkes_remediation
+ref: aiops_hyperforce_remediation
 name : AIOps Remediation
 description : Platform services for AIOps Remediation
 keywords:
