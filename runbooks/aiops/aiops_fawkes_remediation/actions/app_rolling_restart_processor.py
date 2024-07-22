@@ -1,4 +1,4 @@
-from runbooks.casp.casp_connpool.actions.get_prod_data_centers import get_prod_pods
+from runbooks.casp.casp_connpool.actions.get_prod_data_centers import get_prod_pod
 
 # pylint: disable=broad-except,R0201,W0613,E1111,E1128,R0902
 """
