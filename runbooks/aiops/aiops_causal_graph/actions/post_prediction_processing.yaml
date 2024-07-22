@@ -1,0 +1,62 @@
+---
+name: "post_prediction_processing"
+pack: "aiops_causal_graph"
+description: "Post prediction processing"
+runner_type: "python-script"
+entry_point: "post_prediction_processing.py"
+enabled: true
+parameters:
+    start_ts:
+      type: "integer"
+      description: "Start Timestamp in Milliseconds"
+      required: false
+    end_ts:
+      type: "integer"
+      description: "End Timestamp in Milliseconds"
+      required: false
+    env_type:
+      type: "string"
+      description: "Pod/Cell Environment"
+      required: true
+    metadata:
+      type: "object"
+      description: "Pod/Cell Metadata"
+      required: true
+    execution_id:
+      type: "string"
+      description: "Execution ID for workflow"
+      required: false
+    group:
+      type: "string"
+      description: "Group Name for storing data in internal KV Pair"
+      required: true
+      default: "causal-graph"
+    slack_section_name:
+      type: "string"
+      description: "Slack Section Name"
+      required: true
+      default: "Causal Graph"
+    post_to_slack_flag:
+      type: "boolean"
+      description: "Causal graph is in dark launch mode, so not posting to slack"
+      default: true
+    post_as_new_reply_flag:
+      type: "boolean"
+      description: "Flag to set if output should go as new reply to same thread"
+      required: true
+      default: true
+    anomalous_timeseries:
+      type: "array"
+      description: "List of anomalous timeseries with anomaly information"
+    impacted_services:
+      type: "array"
+      description: "List of names of impacted services"
+    is_custom_time:
+      type: "boolean"
+      description: "Is ICA triggered for custom time range"
+      required: true
+      default: false
+    custom_params:
+      type: "object"
+      description: "ICA execution params"
+      required: false

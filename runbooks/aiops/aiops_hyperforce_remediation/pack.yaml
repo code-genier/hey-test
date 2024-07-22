@@ -1,0 +1,13 @@
+---
+ref: aiops_hyperforce_remediation
+name : AIOps Hyperforce Remediation
+description : Platform services for AIOps Remediations in Hypeforce
+keywords:
+  - aiops
+  - auto remediataion
+  - hyperforce
+version: 0.0.1
+python_versions:
+  - "3"
+author : Salesforce Dev
+email: fawkes-alerts@salesforce.com

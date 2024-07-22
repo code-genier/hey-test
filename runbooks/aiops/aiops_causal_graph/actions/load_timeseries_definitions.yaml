@@ -1,0 +1,13 @@
+---
+name: "load_timeseries_definitions"
+pack: "aiops_causal_graph"
+description: "Load timeseries definitions for causal graph training"
+runner_type: "python-script"
+entry_point: "load_timeseries_definitions.py"
+enabled: true
+parameters:
+    definitions_path:
+      type: "string"
+      description: "Path for definitions yaml"
+      required: true
+      default: ""

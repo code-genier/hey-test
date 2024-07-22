@@ -1,0 +1,13 @@
+---
+ref: aiops_fawkes_remediation
+name : AIOps Remediation
+description : Platform services for AIOps Remediation
+keywords:
+  - aiops
+  - auto remediataion
+  - fawkes API
+version: 0.0.2
+python_versions:
+  - "3"
+author : Salesforce Dev
+email: fawkes-alerts@salesforce.com

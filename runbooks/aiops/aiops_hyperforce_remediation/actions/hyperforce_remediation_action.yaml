@@ -1,0 +1,79 @@
+---
+name: "hyperforce_remediation_action"
+runner_type: "python-script"
+description: "HYperforce action for kubernetes pods"
+enabled: true
+entry_point: "hyperforce_remediation_action.py"
+parameters:
+    initiator:
+      description: "The user who executed this action"
+      required: true
+      immutable: true
+      default: '{{ action_context.user }}'
+    cell:
+      type: "string"
+      description: "falcon instance name"
+      required: true
+    falcon_instance:
+      type: "string"
+      description: "falcon instance name"
+      required: true
+    functional_domain:
+      type: "string"
+      description: "functional domain name"
+    override_action:
+      type: "string"
+      default: ""
+      description: "overriden action for this issue"
+    kpod:
+      type: "string"
+      description: "Optional kpod name which is having the issue. Leave it empty if the issue is not specific to kpod"
+      default: ""
+    create_case:
+      type: boolean
+      default: True
+      description: "flag for gus case creation"
+    issue:
+      type: "string"
+      description: "action that is executed on kpod"
+      required: true
+    incident_start_millis:
+      type: "integer"
+      description: "Start Timestamp in millis"
+      required: true
+    notify_slack:
+      type: boolean
+      default: True
+      description: "flag to notify action progress in slack"
+      required: true
+    slack_alert_ts:
+      type: string
+      description: "timestamp of slack message to which updates need to be sent"
+    send_thread_msg_to_channel:
+      type: boolean
+      default: True
+      description: "config for broadcasting thread msg to channel,applicable only when slack_ts is not none"
+    script_args:
+      type: string
+      default: ""
+      description: "arguments that need to be passed to the action script"
+    create_change_case:
+      type: boolean
+      default: False
+      description: "flag for change case creation"
+    execute_action_from_any_kpod:
+      type: boolean
+      default: True
+      description: "flag for executing from any kpod for actions that are not kpod specific"
+    validation_params:
+      type: "object"
+      description: "Dynamic parameters for tuning validations"
+      required: false
+    slack_channel_override:
+      type: string
+      default: ""
+      description: "optional slack channel override to allow a different channel to be used for an issue type"
+    fawkes_guid:
+      type: "string"
+      description: "guid of fawkes remediation action"
+      required: true

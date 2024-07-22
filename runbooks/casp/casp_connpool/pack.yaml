@@ -1,0 +1,12 @@
+---
+ref: casp_connpool
+name : Connection Pool Runbook
+description : Runbook to Triage and Remediate Connection Pool Issues
+keywords:
+  - casp
+  - connection pool
+version: 0.0.1
+python_versions:
+  - "3"
+author : Fawkes Dev
+email: fawkes-dev@salesforce.com

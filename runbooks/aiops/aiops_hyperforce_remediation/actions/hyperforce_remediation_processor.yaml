@@ -1,0 +1,6 @@
+---
+name: "hyperforce_remediation_processor"
+runner_type: "python-script"
+description: "Updates hyperforce remediation action status asynchronously"
+enabled: true
+entry_point: "hyperforce_remediation_processor.py"

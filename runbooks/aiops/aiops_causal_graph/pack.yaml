@@ -1,0 +1,10 @@
+ref: aiops_causal_graph
+name: aiops_causal_graph
+description: Causal Graph Pack
+keywords:
+    - Causal Graph
+version: 1.0.0
+python_versions:
+    - "3"
+author: Salesforce
+email: fawkes-alerts@salesforce.com

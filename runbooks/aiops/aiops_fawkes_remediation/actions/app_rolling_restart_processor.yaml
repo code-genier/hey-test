@@ -1,0 +1,6 @@
+---
+name: "app_rolling_restart_processor"
+runner_type: "python-script"
+description: "Rolling restart processor"
+enabled: true
+entry_point: "app_rolling_restart_processor.py"

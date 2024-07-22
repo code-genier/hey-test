@@ -1,0 +1,16 @@
+---
+name: "train_model_per_timeseries_pod"
+pack: "aiops_causal_graph"
+description: "Train a model for the specified timeseries and pod for causal graph"
+runner_type: "python-script"
+entry_point: "train_model_per_timeseries_pod.py"
+enabled: true
+parameters:
+    timeseries:
+      type: "object"
+      description: "timeseries definition"
+      required: true
+    pod_or_cell:
+      type: "object"
+      description: "pod or cell information"
+      required: true

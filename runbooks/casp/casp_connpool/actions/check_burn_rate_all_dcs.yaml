@@ -1,0 +1,41 @@
+---
+name: "check_burn_rate_all_dcs"
+runner_type: "python-script"
+description: "Check Connection Pool Burn Rate Across all Data Centres"
+enabled: true
+entry_point: "check_burn_rate_all_dcs.py"
+parameters:
+    dc:
+        type: "string"
+        description: "optional data center to run action for only one dc"
+        required: false
+    connection_pool_burn_rate_threshold_5min:
+        type: number
+        description: "Burn rate Threshold for Connection Pool Issue"
+        default: 0.0173
+        required: true
+    connection_pool_burn_rate_threshold_1hr:
+        type: number
+        description: "Burn rate Threshold for Connection Pool Issue"
+        default: 0.0014
+        required: true
+    query_start_timestamp_millis:
+        type: "integer"
+        description: "Start Timestamp for Query in millis"
+        required: false
+    query_end_timestamp_millis:
+        type: "integer"
+        description: "End Timestamp for Query in millis"
+        required: false
+    create_investigation:
+        type: boolean
+        default: True
+        description: "Flag for Investigation Generations"
+    create_case:
+        type: boolean
+        default: True
+        description: "Flag for Case Generations"
+    create_slack_notification:
+        type: boolean
+        default: True
+        description: "Flag for Slack Notifications"
